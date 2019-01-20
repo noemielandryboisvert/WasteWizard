@@ -1,5 +1,5 @@
 {
-  "name": "WasteWizard",
+  "name": "waste-wizard",
   "version": "1.0.0",
   "main": "index.js",
   "author": "",
@@ -33,7 +33,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "@hig/styles": "^0.2.2",
+    "axios": "^0.18.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"

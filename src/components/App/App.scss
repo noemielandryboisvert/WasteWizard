@@ -1,11 +1,36 @@
-@import "~@hig/styles/mixins/colors.scss";
-@import "~@hig/styles/mixins/typography.scss";
-@import "~@hig/styles/mixins/spacing.scss";
+@import './styles';
+
+body {
+    margin: 0px;
+}
 
 .app {
-    @include typography-base;
-    width: 800px;
-    margin: spacing(xs) auto;
-    padding: spacing(m);
-    background-color: color(hig-gray-10);
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
 }
+
+.app-title {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-image: linear-gradient(to right, $blue , $green);
+
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+}
+
+.favorites {
+    background-color: $light-green;
+}
+
+.favorites-title {
+    color: $green;
+    margin: $spacing;
+}
+

@@ -1,0 +1,42 @@
+@import '../App/styles';
+
+.search {
+    display: flex;
+    padding: $spacing;
+    align-items: center;
+}
+
+.search-bar {
+    height: 40px;
+    flex-grow: 1;
+    margin-right: $spacing;
+    padding: 0px $spacing-small;
+    font-size: 20px;
+}
+
+.search-btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: $spacing-small;
+    background-color: $green;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $teal;
+    }
+
+    &:active,
+    &:focus {
+        background-color: $blue;
+        outline: none;
+    }
+
+    svg {
+        flex-grow: 1;
+        fill: white;
+        stroke: white;
+    }
+}

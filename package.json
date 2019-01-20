@@ -5,6 +5,7 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "homepage": "https://noemielandryboisvert.github.io/WasteWizard/",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
@@ -34,14 +35,18 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^2.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-html-parser": "^2.0.2"
   },
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
     "start": "webpack-dev-server --open --config webpack.config.dev.js",
     "test": "",
-    "eslint": "eslint src --ext .js,.jsx"
+    "eslint": "eslint src --ext .js,.jsx",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }

@@ -4,17 +4,30 @@
     margin: $spacing;
     display: flex;
     align-items: flex-start;
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    li {
+        margin-bottom: $spacing;
+    }
+
+    p {
+        margin: 0px;
+    }
 }
 
 .item-title {
     flex-shrink: 0;
     width: 200px;
-    font-size: 16px;
+    font-size: $font-size;
 }
 
 .favorite {
     margin-right: $spacing;
-    font-size: 22px;
+    font-size: $font-size-bigger;
     transform: translateY(-6px);
 
     border: none;
@@ -45,5 +58,6 @@
 }
 
 .item-desc {
-    font-size: 14px;
+    font-size: $font-size-small;
+    margin: 0px $spacing * 2;
 }

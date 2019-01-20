@@ -5,48 +5,24 @@ import Waste from '../../models/Waste';
 import Item from '../Item/Item';
 
 /**
- * ItemList component:
- * A list of Item components
+ * ItemList component renders:
+ * 1 - List of Item components
  */
-class ItemList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
-
-  componentDidMount() {
-    //
-  }
-
-  componentWillUnmount() {
-    //
-  }
-
-  render() {
-    const { items, toggleFavorite } = this.props;
-
-    // For each items, render an Item component
-    const itemsReact = [];
-    items.forEach((result) => {
-      itemsReact.push(
+const ItemList = ({ items, toggleFavorite }) => (
+  <div className="search-results">
+    {
+      items.map(item => (
         <Item
-          key={result.title}
-          title={result.title}
-          description={result.description}
-          favorite={result.favorite}
+          key={item.title}
+          title={item.title}
+          description={item.description}
+          favorite={item.favorite}
           toggleFavorite={toggleFavorite}
-        />,
-      );
-    });
-
-    return (
-      <div className="search-results">
-        {itemsReact}
-      </div>
-    );
-  }
-}
+        />
+      ))
+    }
+  </div>
+);
 
 ItemList.propTypes = {
   items: PropTypes.arrayOf(Waste).isRequired,

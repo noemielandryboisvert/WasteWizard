@@ -1,0 +1,24 @@
+@import '../App/styles.scss';
+
+.error {
+    margin: $spacing;
+
+    button {
+        color: white;
+        font-weight: bold;
+        padding: $spacing-small;
+        background-color: $green;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $teal;
+        }
+
+        &:active,
+        &:focus {
+            background-color: $blue;
+            outline: none;
+        }
+    }
+}

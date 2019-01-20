@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ItemList.scss';
 
 import Waste from '../../models/Waste';
 import Item from '../Item/Item';
 
+/**
+ * ItemList component:
+ * A list of Item components
+ */
 class ItemList extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +25,8 @@ class ItemList extends React.Component {
 
   render() {
     const { items, toggleFavorite } = this.props;
+
+    // For each items, render an Item component
     const itemsReact = [];
     items.forEach((result) => {
       itemsReact.push(
